@@ -1,0 +1,28 @@
+#include <conio.h>
+#include <iostream>
+using namespace std;
+
+void main(){
+	int n=0, sMin=1420,i;
+	float sbruto, sneto, suma=0, promedio;
+	char c='s';
+	cout<<"Ingrese el numero de trabajadores: ";
+	cin>>n;
+		for(i=0;i<n;i++){
+		cout<<"Ingrese salario bruto del trabajador: ";
+		cin>>sbruto;
+		if(sbruto>15000){
+			sneto=sbruto-(sbruto*0.121)-(sbruto*0.13)-(sbruto*0.01);
+		}else{
+			if(sbruto>(sMin*2)){
+				sneto=sbruto-(sbruto*0.121)-(sbruto*0.13);
+			}else{
+				sneto=sbruto-(sbruto*0.121);
+			}
+		}
+		suma=suma + sneto;
+	}
+	promedio=suma/n;
+	cout<<"El promedio de los sueldos netos es: "<<promedio;
+	getch();
+}
