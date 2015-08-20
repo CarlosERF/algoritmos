@@ -1,0 +1,18 @@
+#include <conio.h>
+#include <iostream>
+#define PI 3.14159
+using namespace std;
+
+float aCir(int n){
+	float a;
+	a=PI*n*n;
+	return(a);
+}
+
+void main(){
+	float r;
+	cout<<"Ingrese un radio: ";
+	cin>>r;
+	cout<<"El area de su circulo es: "<<aCir(r);
+	getch();
+}
